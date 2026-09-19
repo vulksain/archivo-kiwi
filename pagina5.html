@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>24 · 09 · 2026</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #111820;
+            color: #e8edf0;
+            font-family: Georgia, "Times New Roman", serif;
+            overflow-x: hidden;
+        }
+
+        .pagina {
+            min-height: 100vh;
+            padding: 45px 25px 70px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .pagina::before {
+            content: "";
+            position: fixed;
+            inset: 20px;
+            border: 1px solid rgba(180, 200, 210, 0.15);
+            pointer-events: none;
+        }
+
+        .contenido {
+            width: 100%;
+            max-width: 650px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .archivo {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #718896;
+            margin-bottom: 45px;
+        }
+
+        .fecha {
+            font-size: clamp(42px, 11vw, 70px);
+            font-weight: normal;
+            letter-spacing: 4px;
+            line-height: 1.2;
+        }
+
+        .estado {
+            margin-top: 25px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #718896;
+        }
+
+        .antes {
+            margin-top: 80px;
+        }
+
+        .falta {
+            font-size: 38px;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .cuenta {
+            font-size: 20px;
+            font-style: italic;
+            color: #a9bdc8;
+        }
+
+        .contador {
+            margin-top: 45px;
+            font-size: 90px;
+            font-family: Arial, sans-serif;
+            font-weight: 300;
+        }
+
+        .preparate {
+            margin-top: 15px;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 4px;
+            color: #718896;
+        }
+
+        .cumple {
+            display: none;
+            animation: aparecer 2s ease forwards;
+        }
+
+        .cumple.visible {
+            display: block;
+        }
+
+        .completado {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #718896;
+            margin-bottom: 25px;
+        }
+
+        .titulo-cumple {
+            font-size: clamp(35px, 9vw, 60px);
+            font-weight: normal;
+            line-height: 1.3;
+            margin-bottom: 45px;
+        }
+
+        .carta {
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #dce3e7;
+        }
+
+        .carta p {
+            margin-bottom: 25px;
+        }
+
+        .centro {
+            text-align: center;
+        }
+
+        .final {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .eternidad {
+            font-size: 27px;
+            font-style: italic;
+            margin-bottom: 35px;
+        }
+
+        .ultima {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #a9bdc8;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <section class="contenido">
+
+            <div id="antes">
+
+                <div class="archivo">
+                    ARCHIVO NØ. 240926
+                </div>
+
+                <div class="fecha">
+                    24 · 09 · 2026
+                </div>
+
+                <div class="estado">
+                    ESTADO: CASI COMPLETO
+                </div>
+
+                <div class="antes">
+
+                    <div class="falta">
+                        FALTA POCO.
+                    </div>
+
+                    <div class="cuenta">
+                        Cuenta conmigo.
+                    </div>
+
+                    <div class="contador" id="contador">
+                        10
+                    </div>
+
+                    <div class="preparate">
+                        PREPÁRATE
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="cumple" class="cumple">
+
+                <div class="completado">
+                    ARCHIVO COMPLETADO.
+                </div>
+
+                <h1 class="titulo-cumple">
+                    FELIZ CUMPLEAÑOS,<br>
+                    GARÉTHITO.
+                </h1>
+
+
+                <article class="carta">
+
+                    <p>
+                        Hoy quiero celebrar algo que para mí significa
+                        muchísimo más que una fecha.
+                    </p>
+
+                    <p>
+                        Quiero celebrar tu existencia.
+                    </p>
+
+                    <p>
+                        Gracias por existir, por haber llegado a mi vida,
+                        por tu compañía y por cada momento que hemos
+                        podido compartir.
+                    </p>
+
+                    <p>
+                        Gracias por ser tú, por tu risa, por tu forma de
+                        querer y por todas esas pequeñas cosas que hacen
+                        que seas una persona tan especial para mí.
+                    </p>
+
+                    <p>
+                        Deseo de corazón que seas muy feliz, que siempre
+                        estés bien y que la vida te regale muchísimas
+                        razones para sonreír.
+                    </p>
+
+                    <p>
+                        Eres mi persona favorita y te adoro muchísimo.
+                    </p>
+
+                    <p>
+                        Y espero poder estar aquí para celebrar contigo
+                        muchos cumpleaños más.
+                    </p>
+
+                    <p class="centro">
+                        Hoy solamente quiero que recuerdes algo:
+                        <br><br>
+                        <strong>me alegra muchísimo que existas.</strong>
+                    </p>
+
+
+                    <div class="final">
+
+                        <div class="eternidad">
+                            Mi eternidad y yo
+                        </div>
+
+                        <div class="ultima">
+                            Siempre te seguiré a cualquier lado que vayas,
+                            incluso al mismísimo infierno.
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        /*
+         * ECUADOR CONTINENTAL:
+         * 24 de septiembre de 2026 a las 00:00
+         *
+         * MÉXICO (UTC-6):
+         * 23 de septiembre de 2026 a las 23:00
+         */
+
+        const fechaObjetivo =
+            new Date("2026-09-23T23:00:00-06:00").getTime();
+
+        const contador = document.getElementById("contador");
+        const antes = document.getElementById("antes");
+        const cumple = document.getElementById("cumple");
+
+        function actualizar() {
+
+            const ahora = new Date().getTime();
+
+            const diferencia = fechaObjetivo - ahora;
+
+            if (diferencia <= 0) {
+
+                antes.style.display = "none";
+
+                cumple.classList.add("visible");
+
+                return;
+            }
+
+            const segundos =
+                Math.ceil(diferencia / 1000);
+
+            if (segundos <= 10) {
+
+                contador.textContent = segundos;
+
+            } else {
+
+                contador.textContent = "10";
+
+            }
+        }
+
+        actualizar();
+
+        setInterval(actualizar, 250);
+
+    </script>
+
+</body>
+</html>
