@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ARCHIVO NØ. 240926</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #111820;
+            color: #e8edf0;
+            font-family: Georgia, "Times New Roman", serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .archivo {
+            width: 100%;
+            min-height: 100vh;
+            padding: 35px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .archivo::before {
+            content: "";
+            position: absolute;
+            inset: 20px;
+            border: 1px solid rgba(180, 200, 210, 0.18);
+            pointer-events: none;
+        }
+
+        .contenido {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .clasificacion {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #8ea4b2;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 11vw, 68px);
+            font-weight: normal;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .linea {
+            width: 90px;
+            height: 1px;
+            background: #718896;
+            margin: 25px auto;
+        }
+
+        .estado {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #aebbc2;
+            line-height: 2;
+        }
+
+        .destinatario {
+            margin-top: 42px;
+            font-size: 21px;
+            letter-spacing: 1px;
+        }
+
+        .alias {
+            margin-top: 8px;
+            font-size: 12px;
+            font-style: italic;
+            color: #8ea4b2;
+        }
+
+        .boton {
+            margin-top: 55px;
+            padding: 16px 28px;
+            background: transparent;
+            border: 1px solid #8096a3;
+            color: #e8edf0;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .boton:hover {
+            background: rgba(128, 150, 163, 0.15);
+        }
+
+        .fecha {
+            margin-top: 35px;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: #687983;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="archivo">
+
+        <section class="contenido">
+
+            <div class="clasificacion">
+                CLASIFICACIÓN: PERSONAL
+            </div>
+
+            <h1>ARCHIVO NØ.<br>240926</h1>
+
+            <div class="linea"></div>
+
+            <div class="estado">
+                ESTADO: SELLADO<br>
+                ACCESO: AUTORIZADO
+            </div>
+
+            <div class="destinatario">
+                DESTINATARIO: GARÉTHITO
+            </div>
+
+            <div class="alias">
+                “mi pequeña hada de la nieve japonesa”
+            </div>
+
+            <button class="boton" onclick="abrirArchivo()">
+                [ ABRIR ARCHIVO ]
+            </button>
+
+            <div class="fecha">
+                ARCHIVO PERSONAL · 2026
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        function abrirArchivo() {
+            window.location.href = "pagina2.html";
+        }
+    </script>
+
+</body>
+</html>
