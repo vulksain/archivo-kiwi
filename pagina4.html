@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pequeñas cosas · ARCHIVO NØ. 240926</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #111820;
+            color: #e8edf0;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .pagina {
+            min-height: 100vh;
+            padding: 55px 25px 70px;
+            position: relative;
+        }
+
+        .pagina::before {
+            content: "";
+            position: fixed;
+            inset: 20px;
+            border: 1px solid rgba(180, 200, 210, 0.15);
+            pointer-events: none;
+        }
+
+        .contenido {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .numero {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #718896;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: normal;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .descripcion {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #aebbc2;
+            margin-bottom: 45px;
+        }
+
+        .regalo {
+            border: 1px solid rgba(128, 150, 163, 0.45);
+            padding: 25px;
+            margin-bottom: 22px;
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        .numero-regalo {
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: #718896;
+            margin-bottom: 10px;
+        }
+
+        .nombre-regalo {
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        .boton {
+            padding: 13px 20px;
+            background: transparent;
+            border: 1px solid #8096a3;
+            color: #e8edf0;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 3px;
+            cursor: pointer;
+        }
+
+        .contenido-regalo {
+            display: none;
+            margin-top: 25px;
+            animation: aparecer 1s ease forwards;
+        }
+
+        .contenido-regalo.abierto {
+            display: block;
+        }
+
+        .foto {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 20px;
+            border: 1px solid rgba(180, 200, 210, 0.2);
+        }
+
+        .texto-regalo {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #cbd5da;
+        }
+
+        .continuar {
+            display: block;
+            width: fit-content;
+            margin: 50px auto 0;
+            padding: 15px 25px;
+            border: 1px solid #8096a3;
+            color: #e8edf0;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-decoration: none;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <section class="contenido">
+
+            <div class="numero">
+                ARCHIVO 04 · OBJETOS CONSERVADOS
+            </div>
+
+            <h1>PEQUEÑAS COSAS</h1>
+
+            <p class="descripcion">
+                Algunas cosas pueden parecer pequeñas.
+                Pero cuando vienen de alguien importante,
+                terminan significando mucho más.
+            </p>
+
+
+            <!-- REGALO 01 -->
+
+            <div class="regalo">
+
+                <div class="numero-regalo">
+                    REGALO 01
+                </div>
+
+                <div class="nombre-regalo">
+                    Algo para ti
+                </div>
+
+                <button class="boton" onclick="abrirRegalo(1)">
+                    [ ABRIR ]
+                </button>
+
+                <div class="contenido-regalo" id="regalo1">
+
+                    <img
+                        class="foto"
+                        src="fotos/regalo1.jpg"
+                        alt="Regalo 01"
+                    >
+
+                    <p class="texto-regalo">
+                        Aquí irá la pequeña historia o mensaje
+                        que quieras poner junto a este regalo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- REGALO 02 -->
+
+            <div class="regalo">
+
+                <div class="numero-regalo">
+                    REGALO 02
+                </div>
+
+                <div class="nombre-regalo">
+                    Algo que guardo
+                </div>
+
+                <button class="boton" onclick="abrirRegalo(2)">
+                    [ ABRIR ]
+                </button>
+
+                <div class="contenido-regalo" id="regalo2">
+
+                    <img
+                        class="foto"
+                        src="fotos/regalo2.jpg"
+                        alt="Regalo 02"
+                    >
+
+                    <p class="texto-regalo">
+                        Aquí irá la pequeña historia o mensaje
+                        que quieras poner junto a este regalo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- REGALO 03 -->
+
+            <div class="regalo">
+
+                <div class="numero-regalo">
+                    REGALO 03
+                </div>
+
+                <div class="nombre-regalo">
+                    Algo que es tuyo
+                </div>
+
+                <button class="boton" onclick="abrirRegalo(3)">
+                    [ ABRIR ]
+                </button>
+
+                <div class="contenido-regalo" id="regalo3">
+
+                    <img
+                        class="foto"
+                        src="fotos/regalo3.jpg"
+                        alt="Regalo 03"
+                    >
+
+                    <p class="texto-regalo">
+                        Aquí irá la pequeña historia o mensaje
+                        que quieras poner junto a este regalo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a class="continuar" href="pagina5.html">
+                [ CONTINUAR ]
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        function abrirRegalo(numero) {
+
+            const regalo = document.getElementById("regalo" + numero);
+
+            regalo.classList.toggle("abierto");
+
+        }
+
+    </script>
+
+</body>
+</html>
