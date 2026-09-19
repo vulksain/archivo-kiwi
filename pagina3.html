@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>11:11 · ARCHIVO NØ. 240926</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #111820;
+            color: #e8edf0;
+            font-family: Georgia, "Times New Roman", serif;
+            overflow: hidden;
+        }
+
+        .pagina {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        .pagina::before {
+            content: "";
+            position: absolute;
+            inset: 20px;
+            border: 1px solid rgba(180, 200, 210, 0.15);
+        }
+
+        .contenido {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 550px;
+            text-align: center;
+        }
+
+        .archivo {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #718896;
+            margin-bottom: 55px;
+        }
+
+        .numero {
+            font-size: clamp(90px, 25vw, 150px);
+            font-weight: normal;
+            letter-spacing: 8px;
+            line-height: 1;
+            color: #e8edf0;
+            text-shadow: 0 0 35px rgba(150, 180, 195, 0.15);
+        }
+
+        .subtitulo {
+            margin-top: 25px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #718896;
+        }
+
+        .boton {
+            margin-top: 65px;
+            padding: 16px 28px;
+            background: transparent;
+            border: 1px solid #8096a3;
+            color: #e8edf0;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+
+        .boton:hover {
+            background: rgba(128, 150, 163, 0.15);
+        }
+
+        .deseo {
+            display: none;
+            margin-top: 50px;
+            animation: aparecer 1.5s ease forwards;
+        }
+
+        .deseo.visible {
+            display: block;
+        }
+
+        .deseo .pequeno {
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: #718896;
+            margin-bottom: 20px;
+        }
+
+        .deseo p {
+            font-size: 22px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .continuar {
+            display: inline-block;
+            margin-top: 45px;
+            padding: 14px 24px;
+            border: 1px solid #8096a3;
+            color: #e8edf0;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-decoration: none;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <section class="contenido">
+
+            <div class="archivo">
+                ARCHIVO 03 · MOMENTO ESPECIAL
+            </div>
+
+            <div class="numero">
+                11:11
+            </div>
+
+            <div class="subtitulo">
+                MI 11:11 · MI ÚNICO DESEO
+            </div>
+
+            <button class="boton" onclick="mostrarDeseo()">
+                [ PEDIR UN DESEO ]
+            </button>
+
+            <div class="deseo" id="deseo">
+
+                <div class="pequeno">
+                    DESEO REGISTRADO
+                </div>
+
+                <p>
+                    Si alguna vez me preguntan cuál es mi 11:11,
+                    probablemente siempre voy a pensar en ti.
+                </p>
+
+                <a class="continuar" href="pagina4.html">
+                    [ CONTINUAR ]
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        function mostrarDeseo() {
+            document.querySelector(".boton").style.display = "none";
+            document.getElementById("deseo").classList.add("visible");
+        }
+    </script>
+
+</body>
+</html>
