@@ -1,192 +1,299 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>11:11 · ARCHIVO NØ. 240926</title>
+<title>REGISTRO · ESTE ARCHIVO EXISTE POR TI</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-        body {
-            min-height: 100vh;
-            background: linear-gradient(rgba(17, 24, 32, 0.78), rgba(17, 24, 32, 0.88)),
+    body {
+        margin: 0;
+        min-height: 100vh;
+
+        background:
+            linear-gradient(rgba(17, 24, 32, 0.80), rgba(17, 24, 32, 0.92)),
             url("fondo3.png") center center / cover no-repeat;
-            color: #e8edf0;
-            font-family: Georgia, "Times New Roman", serif;
-            overflow: hidden;
-        }
+
+        background-attachment: fixed;
+
+        color: #e8edf0;
+        font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .pagina {
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 55px 25px 70px;
+    }
+
+    .encabezado {
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
+    .numero {
+        font-size: 13px;
+        letter-spacing: 4px;
+        opacity: 0.65;
+        margin-bottom: 18px;
+    }
+
+    .titulo {
+        font-size: 30px;
+        letter-spacing: 3px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .linea {
+        width: 55px;
+        height: 1px;
+        background: rgba(232, 237, 240, 0.5);
+        margin: 25px auto;
+    }
+
+    .texto {
+        font-size: 18px;
+        line-height: 1.9;
+        text-align: left;
+    }
+
+    .texto p {
+        margin: 0 0 27px;
+    }
+
+    .destacado {
+        text-align: center;
+        font-size: 22px;
+        letter-spacing: 1px;
+        margin: 42px 0;
+    }
+
+    .admiro {
+        text-align: center;
+        font-size: 25px;
+        letter-spacing: 3px;
+        margin: 45px 0 30px;
+    }
+
+    .cita {
+        margin: 45px 10px;
+        padding: 25px 20px;
+        border-left: 1px solid rgba(232, 237, 240, 0.45);
+        font-style: italic;
+        font-size: 17px;
+        line-height: 1.9;
+        opacity: 0.92;
+    }
+
+    .final {
+        text-align: center;
+        margin-top: 55px;
+    }
+
+    .nombre {
+        font-size: 21px;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+    }
+
+    .frase-final {
+        font-size: 22px;
+        letter-spacing: 2px;
+        line-height: 1.6;
+    }
+
+    .continuar {
+        display: inline-block;
+        margin-top: 55px;
+        padding: 13px 24px;
+
+        border: 1px solid rgba(232, 237, 240, 0.45);
+        color: #e8edf0;
+        text-decoration: none;
+
+        font-size: 13px;
+        letter-spacing: 3px;
+
+        transition: 0.3s ease;
+    }
+
+    .continuar:hover {
+        background: rgba(232, 237, 240, 0.10);
+        border-color: rgba(232, 237, 240, 0.75);
+    }
+
+    @media (max-width: 600px) {
 
         .pagina {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-            position: relative;
+            padding: 45px 22px 60px;
         }
 
-        .pagina::before {
-            content: "";
-            position: absolute;
-            inset: 20px;
-            border: 1px solid rgba(180, 200, 210, 0.15);
+        .titulo {
+            font-size: 25px;
         }
 
-        .contenido {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            max-width: 550px;
-            text-align: center;
+        .texto {
+            font-size: 17px;
+            line-height: 1.85;
         }
 
-        .archivo {
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 4px;
-            color: #718896;
-            margin-bottom: 55px;
+        .destacado {
+            font-size: 20px;
         }
 
-        .numero {
-            font-size: clamp(90px, 25vw, 150px);
-            font-weight: normal;
-            letter-spacing: 8px;
-            line-height: 1;
-            color: #e8edf0;
-            text-shadow: 0 0 35px rgba(150, 180, 195, 0.15);
-        }
-
-        .subtitulo {
-            margin-top: 25px;
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 4px;
-            color: #718896;
-        }
-
-        .boton {
-            margin-top: 65px;
-            padding: 16px 28px;
-            background: transparent;
-            border: 1px solid #8096a3;
-            color: #e8edf0;
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 3px;
-            cursor: pointer;
-            transition: 0.4s ease;
-        }
-
-        .boton:hover {
-            background: rgba(128, 150, 163, 0.15);
-        }
-
-        .deseo {
-            display: none;
-            margin-top: 50px;
-            animation: aparecer 1.5s ease forwards;
-        }
-
-        .deseo.visible {
-            display: block;
-        }
-
-        .deseo .pequeno {
-            font-family: Arial, sans-serif;
-            font-size: 9px;
-            letter-spacing: 3px;
-            color: #718896;
-            margin-bottom: 20px;
-        }
-
-        .deseo p {
+        .admiro {
             font-size: 22px;
-            line-height: 1.7;
-            font-style: italic;
         }
 
-        .continuar {
-            display: inline-block;
-            margin-top: 45px;
-            padding: 14px 24px;
-            border: 1px solid #8096a3;
-            color: #e8edf0;
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 3px;
-            text-decoration: none;
+        .cita {
+            font-size: 16px;
         }
 
-        @keyframes aparecer {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .frase-final {
+            font-size: 19px;
         }
-    </style>
+    }
+</style>
 </head>
 
 <body>
 
-    <main class="pagina">
+<div class="pagina">
 
-        <section class="contenido">
+    <div class="encabezado">
 
-            <div class="archivo">
-                SECCIÓN 03 · SISTEMA DETECTADO
-            </div>
+        <div class="numero">
+            PÁG. 03 · REGISTRO
+        </div>
 
-            <div class="numero">
-                11:11
-            </div>
+        <h1 class="titulo">
+            ESTE ARCHIVO EXISTE POR TI
+        </h1>
 
-            <div class="subtitulo">
-                MI 11:11 · MI ÚNICO DESEO
-            </div>
+        <div class="linea"></div>
 
-            <button class="boton" onclick="mostrarDeseo()">
-                [ PEDIR UN DESEO ]
-            </button>
+    </div>
 
-            <div class="deseo" id="deseo">
 
-                <div class="pequeno">
-                    DESEO REGISTRADO
-                </div>
+    <div class="texto">
 
-                <p>
-                    Si alguna vez me preguntan cuál es mi 11:11,
-                    probablemente siempre voy a pensar en ti.
-                </p>
+        <p>
+            Hay personas que llegan a tu vida y simplemente están,
+            y hay otras que, sin darse cuenta, terminan dejando
+            pequeños pedacitos de sí mismas en todo lo que tocan:
+            recuerdos eternos guardados en el corazón, risas que van
+            y vienen, sentimientos inexplicables, momentos imposibles
+            de olvidar.
+        </p>
 
-                <a class="continuar" href="pagina4.html">
-                    [ CONTINUAR ]
-                </a>
+        <p>
+            Y creo que es entonces cuando te das cuenta de que no
+            lo vivirás dos veces en la vida; así que ese momento
+            perfecto lo llevarás eternamente contigo.
+        </p>
 
-            </div>
+        <div class="destacado">
+            Tú eres esa persona para mí.
+        </div>
 
-        </section>
+        <p>
+            No hace mucho, ni siquiera nos conocíamos. Éramos
+            simplemente dos almas caminando sin que nadie nos viera
+            y, entonces, un día, sin previo aviso, nos encontramos
+            en el mismo camino.
+        </p>
 
-    </main>
+        <p>
+            Dicen que ciertos encuentros consiguen cambiar algo
+            dentro de ti. Este es uno de ellos.
+        </p>
 
-    <script>
-        function mostrarDeseo() {
-            document.querySelector(".boton").style.display = "none";
-            document.getElementById("deseo").classList.add("visible");
-        }
-    </script>
+        <p>
+            Es extraño, lo sé. Cuanto más te conozco, más olvido
+            cómo era mi vida sin ti.
+        </p>
+
+        <p>
+            Faltando poco para poder cantarte las mañanitas,
+            quiero que antes sepas algo que no he dicho mucho
+            y que hoy es un buen día para hacerlo.
+        </p>
+
+        <div class="admiro">
+            Te admiro.
+        </div>
+
+        <p>
+            Admiro lo lejos que has llegado. Admiro esa fuerza,
+            esa capacidad que tienes para seguir levantándote día
+            a día. Admiro todo lo que has conseguido construir y,
+            sobre todo, la manera en que has aprendido a seguir
+            adelante incluso en las peores batallas.
+        </p>
+
+        <p>
+            Hay algo muy bonito en poder ser parte y testigo de
+            todo este proceso. Verte seguir en lo que sea que hagas
+            me hace sentir verdaderamente orgulloso de ti.
+        </p>
+
+        <p>
+            Quiero que recuerdes que ningún esfuerzo es pequeño
+            cuando estás construyendo algo que realmente deseas.
+        </p>
+
+        <p>
+            Quizá hoy algunas cosas parezcan lejanas. Quizá haya
+            días en los que avanzar cueste más de lo esperado,
+            pero todo aquello por lo que estás luchando ahora,
+            algún día florecerá.
+        </p>
+
+        <p>
+            Así que sigue. Sigue, no te detengas incluso cuando
+            dudes del porqué lo haces. Sigue incluso cuando el
+            camino se vuelva pesado, porque cuando llegue el día
+            en que mires hacia atrás, espero que puedas reconocer
+            cada paso que diste y todo de lo que fuiste capaz.
+        </p>
+
+    </div>
+
+
+    <div class="cita">
+
+        “Aquí me tienes, aquí estoy y aquí estaré para ti,
+        vida mía. Tendrás mis manos y hombros para sostenerte
+        cuando tus pies se hayan cansado y el amor para adorarte
+        cuando sientas que todos te han destrozado.”
+
+    </div>
+
+
+    <div class="final">
+
+        <div class="nombre">
+            Garéthito,
+        </div>
+
+        <div class="frase-final">
+            ESTE ARCHIVO EXISTE POR TI.
+        </div>
+
+        <a class="continuar" href="pagina4.html">
+            [ CONTINUAR ]
+        </a>
+
+    </div>
+
+</div>
 
 </body>
 </html>
