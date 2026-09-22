@@ -4,180 +4,230 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>UNA GRAN RAZÓN</title>
+<title>REGISTRO · ESTE ARCHIVO EXISTE POR TI</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
 
-    body {
-        margin: 0;
-        min-height: 100vh;
+* {
+    box-sizing: border-box;
+}
 
-        background:
-            linear-gradient(rgba(17, 24, 32, 0.80), rgba(17, 24, 32, 0.92)),
-            url("fondo33.png") center center / cover no-repeat;
+body {
+    margin: 0;
+    min-height: 100vh;
 
-        background-attachment: fixed;
+    background:
+        linear-gradient(
+            rgba(17, 24, 32, 0.88),
+            rgba(17, 24, 32, 0.94)
+        ),
+        url("fondo33.png")
+        center center / cover no-repeat;
 
-        color: #e8edf0;
-        font-family: Georgia, "Times New Roman", serif;
-    }
+    background-attachment: fixed;
+
+    color: #e8edf0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+    padding: 55px 22px 70px;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.numero {
+    font-size: 12px;
+    letter-spacing: 4px;
+    opacity: 0.60;
+    margin-bottom: 18px;
+}
+
+.titulo {
+    font-size: 28px;
+    letter-spacing: 3px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.fecha {
+    margin-top: 18px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    opacity: 0.55;
+}
+
+.linea {
+    width: 55px;
+    height: 1px;
+    background: rgba(232, 237, 240, 0.45);
+    margin: 25px auto;
+}
+
+
+/* TEXTO */
+
+.texto {
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: left;
+}
+
+.texto p {
+    margin: 0 0 28px;
+}
+
+
+/* FRASE DESTACADA */
+
+.destacado {
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.6;
+    margin: 45px 10px;
+    letter-spacing: 0.5px;
+}
+
+
+/* TE ADMIRO */
+
+.admiro {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 4px;
+    margin: 50px 0 35px;
+}
+
+
+/* CITA */
+
+.cita {
+    margin: 50px 5px;
+    padding: 25px 20px;
+
+    border-left: 1px solid rgba(232, 237, 240, 0.45);
+
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.9;
+
+    opacity: 0.88;
+}
+
+
+/* FINAL */
+
+.final {
+    text-align: center;
+    margin-top: 55px;
+}
+
+.nombre {
+    font-size: 21px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.frase-final {
+    font-size: 21px;
+    letter-spacing: 2px;
+    line-height: 1.7;
+}
+
+
+/* BOTÓN */
+
+.continuar {
+    display: inline-block;
+
+    margin-top: 55px;
+    padding: 13px 25px;
+
+    border: 1px solid rgba(232, 237, 240, 0.45);
+
+    color: #e8edf0;
+    text-decoration: none;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    transition: 0.3s ease;
+}
+
+.continuar:hover {
+    background: rgba(232, 237, 240, 0.10);
+    border-color: rgba(232, 237, 240, 0.75);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
 
     .pagina {
-        width: 100%;
-        max-width: 760px;
-        margin: 0 auto;
-        padding: 55px 25px 70px;
-    }
-
-    .encabezado {
-        text-align: center;
-        margin-bottom: 55px;
-    }
-
-    .numero {
-        font-size: 13px;
-        letter-spacing: 4px;
-        opacity: 0.65;
-        margin-bottom: 18px;
+        padding: 45px 21px 60px;
     }
 
     .titulo {
-        font-size: 30px;
-        letter-spacing: 3px;
-        font-weight: normal;
-        margin: 0;
-    }
-
-    .linea {
-        width: 55px;
-        height: 1px;
-        background: rgba(232, 237, 240, 0.5);
-        margin: 25px auto;
+        font-size: 24px;
     }
 
     .texto {
-        font-size: 18px;
-        line-height: 1.9;
-        text-align: left;
-    }
-
-    .texto p {
-        margin: 0 0 27px;
+        font-size: 16.5px;
+        line-height: 1.85;
     }
 
     .destacado {
-        text-align: center;
-        font-size: 22px;
-        letter-spacing: 1px;
-        margin: 42px 0;
+        font-size: 20px;
     }
 
     .admiro {
-        text-align: center;
-        font-size: 25px;
-        letter-spacing: 3px;
-        margin: 45px 0 30px;
+        font-size: 22px;
     }
 
     .cita {
-        margin: 45px 10px;
-        padding: 25px 20px;
-        border-left: 1px solid rgba(232, 237, 240, 0.45);
-        font-style: italic;
-        font-size: 17px;
-        line-height: 1.9;
-        opacity: 0.92;
-    }
-
-    .final {
-        text-align: center;
-        margin-top: 55px;
-    }
-
-    .nombre {
-        font-size: 21px;
-        letter-spacing: 2px;
-        margin-bottom: 18px;
+        font-size: 15.5px;
     }
 
     .frase-final {
-        font-size: 22px;
-        letter-spacing: 2px;
-        line-height: 1.6;
+        font-size: 19px;
     }
 
-    .continuar {
-        display: inline-block;
-        margin-top: 55px;
-        padding: 13px 24px;
+}
 
-        border: 1px solid rgba(232, 237, 240, 0.45);
-        color: #e8edf0;
-        text-decoration: none;
-
-        font-size: 13px;
-        letter-spacing: 3px;
-
-        transition: 0.3s ease;
-    }
-
-    .continuar:hover {
-        background: rgba(232, 237, 240, 0.10);
-        border-color: rgba(232, 237, 240, 0.75);
-    }
-
-    @media (max-width: 600px) {
-
-        .pagina {
-            padding: 45px 22px 60px;
-        }
-
-        .titulo {
-            font-size: 25px;
-        }
-
-        .texto {
-            font-size: 17px;
-            line-height: 1.85;
-        }
-
-        .destacado {
-            font-size: 20px;
-        }
-
-        .admiro {
-            font-size: 22px;
-        }
-
-        .cita {
-            font-size: 16px;
-        }
-
-        .frase-final {
-            font-size: 19px;
-        }
-    }
 </style>
 </head>
+
 
 <body>
 
 <div class="pagina">
 
+
     <div class="encabezado">
 
         <div class="numero">
-            SECCIÓN 03 · SISTEMA DETECTADO
+            PÁG. 03 · REGISTRO
         </div>
 
         <h1 class="titulo">
-            UNA GRAN RAZÓN
+            ESTE ARCHIVO EXISTE POR TI
         </h1>
 
         <div class="linea"></div>
+
+        <div class="fecha">
+            15 · 08 · 2024
+        </div>
 
     </div>
 
@@ -190,22 +240,34 @@
             pequeños pedacitos de sí mismas en todo lo que tocan:
             recuerdos eternos guardados en el corazón, risas que van
             y vienen, sentimientos inexplicables, momentos imposibles
-            de olvidar y creo que es entonces cuando te das cuenta de que no
+            de olvidar.
+        </p>
+
+        <p>
+            Y creo que es entonces cuando te das cuenta de que no
             lo vivirás dos veces en la vida; así que ese momento
             perfecto lo llevarás eternamente contigo.
         </p>
+
 
         <div class="destacado">
             Tú eres esa persona para mí.
         </div>
 
+
         <p>
             No hace mucho, ni siquiera nos conocíamos. Éramos
             simplemente dos almas caminando sin que nadie nos viera
             y, entonces, un día, sin previo aviso, nos encontramos
-            en el mismo camino. 
-            Dicen que ciertos encuentros consiguen 
-            cambiar algo dentro de ti. Este es uno de ellos.
+            en el mismo camino.
+        </p>
+
+        <p>
+            Dicen que ciertos encuentros consiguen cambiar algo
+            dentro de ti. Este es uno de ellos.
+        </p>
+
+        <p>
             Es extraño, lo sé. Cuanto más te conozco, más olvido
             cómo era mi vida sin ti.
         </p>
@@ -216,9 +278,11 @@
             y que hoy es un buen día para hacerlo.
         </p>
 
+
         <div class="admiro">
             Te admiro.
         </div>
+
 
         <p>
             Admiro lo lejos que has llegado. Admiro esa fuerza,
@@ -237,6 +301,9 @@
         <p>
             Quiero que recuerdes que ningún esfuerzo es pequeño
             cuando estás construyendo algo que realmente deseas.
+        </p>
+
+        <p>
             Quizá hoy algunas cosas parezcan lejanas. Quizá haya
             días en los que avanzar cueste más de lo esperado,
             pero todo aquello por lo que estás luchando ahora,
@@ -259,19 +326,19 @@
         “Aquí me tienes, aquí estoy y aquí estaré para ti,
         vida mía. Tendrás mis manos y hombros para sostenerte
         cuando tus pies se hayan cansado y el amor para adorarte
-        cuando sientas que todos te han destrozado.”
+        cuando sientas que todos te hayan destrozado.”
 
     </div>
 
 
     <div class="final">
 
-        <qdiv class="firma">
-                    Garéthito,
-                    <small>ESTE ARCHIVO EXISTE POR TI</small>
-                </div>
+        <div class="nombre">
+            Garéthito,
+        </div>
 
-
+        <div class="frase-final">
+            ESTE ARCHIVO EXISTE POR TI.
         </div>
 
         <a class="continuar" href="pagina4.html">
@@ -279,6 +346,7 @@
         </a>
 
     </div>
+
 
 </div>
 
